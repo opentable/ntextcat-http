@@ -1,102 +1,47 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.IO;
-using System.Linq;
-using IvanAkcheurov.NTextCat.Lib;
-using Nancy;
+﻿using Nancy;
 using Nancy.ModelBinding;
+using Nancy.Responses.Negotiation;
+using NTextCat.NancyHandler.LanguageDetection;
 
 namespace NTextCat.NancyHandler
 {
     public class LanguageDetectModule : NancyModule
     {
-        public LanguageDetectModule(INTextCatMatchingProfileLoader profileLoader = null)
+        public const string LanguageDetectionViewName = "language-detection-test-page";
+
+        public LanguageDetectModule(LanguageDetector languageDetector)
+            : base("/language-detector")
         {
-            if (profileLoader == null)
-                profileLoader = new NTextCatMatchingProfileLoader();
-            
-            Get["/language-detector"] = _ =>
+            Get["/"] = _ =>
             {
-                return View["languages", new DetectedLanguageResponse()];
+                return View[LanguageDetectionViewName, new DetectedLanguageResponse()];
             };
 
-            Post["/language-detector"] = _ =>
+            Post["/"] = _ =>
             {
                 var model = this.Bind<LanguageDetectRequest>();
-                if (model == null || string.IsNullOrWhiteSpace(model.TextForLanguageClassification))
-                    return HttpStatusCode.BadRequest;
+                if (ModelIsInvalid(model))
+                    return BadRequest();
 
-                var detectedLanguageResponse = DetectLanguage(profileLoader, model);
-                detectedLanguageResponse.OriginalText = model.TextForLanguageClassification;
+                DetectedLanguageResponse detectedLanguageResponse = languageDetector.DetectLanguage(model);
 
                 return Negotiate
                     .WithModel(detectedLanguageResponse)
-                    .WithView("languages");
+                    .WithView(LanguageDetectionViewName);
             };
 
         }
-
-        private DetectedLanguageResponse DetectLanguage(INTextCatMatchingProfileLoader profileLoader, LanguageDetectRequest model)
+        
+        private Negotiator BadRequest()
         {
-            var factory = new RankedLanguageIdentifierFactory();
-            var identifier = factory.Load(profileLoader.MatchingProfileFile);
-
-            var matches = identifier.Identify(model.TextForLanguageClassification);
-            var detectedLanguageResponse = FormatResponse(matches);
-            return detectedLanguageResponse;
+            return Negotiate.
+                WithView(LanguageDetectionViewName).
+                WithStatusCode(HttpStatusCode.BadRequest);
         }
 
-        private DetectedLanguageResponse FormatResponse(IEnumerable<Tuple<LanguageInfo, double>> matches)
+        private static bool ModelIsInvalid(LanguageDetectRequest model)
         {
-            var responseList = matches.Select(
-                match => new DetectedLangage() {Iso6393LanguageCode = match.Item1.Iso639_3, MatchScore = match.Item2})
-                .ToList();
-            return new DetectedLanguageResponse() {RankedMatches = responseList};
+            return model == null || string.IsNullOrWhiteSpace(model.TextForLanguageClassification);
         }
-    }
-
-    public interface INTextCatMatchingProfileLoader
-    {
-        string MatchingProfileFile { get; }
-    }
-
-    public class NTextCatMatchingProfileLoader : INTextCatMatchingProfileLoader
-    {
-        private string _matchingProfile;
-
-        public string MatchingProfileFile
-        {
-            get
-            {
-                if (string.IsNullOrWhiteSpace(_matchingProfile))
-                    _matchingProfile = LoadFromAppSettings();
-
-                return _matchingProfile;
-            }
-            set { _matchingProfile = value; }
-        }
-
-        private string LoadFromAppSettings()
-        {
-            return ConfigurationManager.AppSettings["NTextCat.MatchingProfile"];
-        }
-    }
-
-    public class DetectedLanguageResponse
-    {
-        public string OriginalText { get; set; }
-        public List<DetectedLangage> RankedMatches { get; set; }
-    }
-
-    public class DetectedLangage
-    {
-        public string Iso6393LanguageCode { get; set; }
-        public double MatchScore { get; set; }
-    }
-
-    public class LanguageDetectRequest
-    {
-        public string TextForLanguageClassification { get; set; }
     }
 }

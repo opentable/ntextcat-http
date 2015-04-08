@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Microsoft.Owin.Hosting;
 using Owin;
 
@@ -22,7 +18,7 @@ namespace ConsoleHost
 
             if (!int.TryParse(args[0], out portNumber))
             {
-                Console.WriteLine("Argh, thats not a valid port number {0}", args[0]);
+                Console.WriteLine("Thats not a valid port number {0}", args[0]);
                 return;
             }
 

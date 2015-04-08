@@ -1,6 +1,11 @@
-﻿using Nancy;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using Nancy;
 using Nancy.Testing;
 using NTextCat.NancyHandler;
+using NTextCat.NancyHandler.LanguageDetection;
+using NTextCat.NancyHandler.LanguageDetection.Configuration;
 using NUnit.Framework;
 
 namespace NTextCat.NancyHandlerTests
@@ -8,22 +13,30 @@ namespace NTextCat.NancyHandlerTests
     [TestFixture]
     public class LangugeDetectModuleTests
     {
+        private Browser _browser;
+
+        [SetUp]
+        public void ConfigureBrowserToTestLanguageDetector()
+        {
+            _browser = new Browser(with => with.Module(BuildSystemUnderTest()));
+        }
+
+        private BrowserResponse Post(Action<BrowserContext> with = null)
+        {
+            return _browser.Post("/language-detector", with);
+        }
+
         [Test]
         public void WhenNoBodyBadRequest()
         {
-            var browser = new Browser(with => with.Module(new LanguageDetectModule()));
-
-            var response = browser.Post("/language-detector");
-
+            var response = Post();
             Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.BadRequest));
         }
 
         [Test]
         public void WhenBodyInvalidBadRequest()
         {
-            var browser = new Browser(with => with.Module(new LanguageDetectModule()));
-
-            var response = browser.Post("/language-detector", with =>
+            BrowserResponse response = Post(with =>
             {
                 with.Body("random");
             });
@@ -31,31 +44,20 @@ namespace NTextCat.NancyHandlerTests
         }
 
         [Test]
-        public void WhenNotCorrectFormatBadRequest()
-        {
-
-        }
-
-        [Test]
         public void WhenBodyCorrectOkResponse()
         {
-            var browser = new Browser(with => with.Module(new LanguageDetectModule()));
-
-            var response = browser.Post("/language-detector", with =>
+            BrowserResponse response = Post(with =>
             {
                 with.Header("Accept", "application/json");
                 with.JsonBody(new LanguageDetectRequest() { TextForLanguageClassification = "some words" });
             });
-
             Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.OK));
         }
 
         [Test]
         public void TestSupportsXml()
         {
-            var browser = new Browser(with => with.Module(new LanguageDetectModule()));
-
-            var response = browser.Post("/language-detector", with =>
+            BrowserResponse response = Post(with =>
             {
                 with.Header("Accept", "application/xml");
                 with.JsonBody(new LanguageDetectRequest() { TextForLanguageClassification = "some words" });
@@ -69,9 +71,7 @@ namespace NTextCat.NancyHandlerTests
         [Test]
         public void TestSupportsJson()
         {
-            var browser = new Browser(with => with.Module(new LanguageDetectModule()));
-
-            var response = browser.Post("/language-detector", with =>
+            BrowserResponse response = Post(with =>
             {
                 with.Header("Accept", "application/json");
                 with.JsonBody(new LanguageDetectRequest() { TextForLanguageClassification = "some words" });
@@ -83,9 +83,70 @@ namespace NTextCat.NancyHandlerTests
         }
 
         [Test]
-        public void TestName()
+        public void ReturnsOriginalTextWithResponse()
         {
+            const string sampleText = "some words";
 
+            BrowserResponse response = Post(with =>
+            {
+                with.Header("Accept", "application/json");
+                with.JsonBody(new LanguageDetectRequest() { TextForLanguageClassification = sampleText });
+            });
+
+            var body = response.Body.DeserializeJson<DetectedLanguageResponse>();
+
+            Assert.That(body.OriginalText, Is.EqualTo(sampleText));
         }
+
+        [Test]
+        public void ReturnsListOfPossibleLanguagesWithResponse()
+        {
+            const string sampleText = "This is a sample of english language text";
+
+            var response = Post(with =>
+            {
+                with.Header("Accept", "application/json");
+                with.JsonBody(new LanguageDetectRequest() { TextForLanguageClassification = sampleText });
+            });
+
+            var body = response.Body.DeserializeJson<DetectedLanguageResponse>();
+
+            Assert.That(body.RankedMatches.Count, Is.GreaterThan(1));
+        }
+
+        [Test]
+        public void CheckEnglishIsDetectedAsExpected()
+        {
+            const string sampleText = "This is a sample of english language text";
+
+            var response = Post(with =>
+            {
+                with.Header("Accept", "application/json");
+                with.JsonBody(new LanguageDetectRequest() { TextForLanguageClassification = sampleText });
+            });
+
+            var body = response.Body.DeserializeJson<DetectedLanguageResponse>();
+
+            Assert.That(body.RankedMatches.First().Iso6393LanguageCode, Is.EqualTo("eng"));
+            Assert.That(body.RankedMatches.First().MatchScore, Is.GreaterThan(0));
+        }
+                
+        private LanguageDetectModule BuildSystemUnderTest()
+        {
+            return new LanguageDetectModule(new LanguageDetector(new NTextCatMatchingProfileLoader()));
+        }
+
+        public class DetectedLanguageResponse
+        {
+            public List<DetectedLangage> RankedMatches;
+            public string OriginalText;
+        }
+
+        public class DetectedLangage
+        {
+            public string Iso6393LanguageCode;
+            public double MatchScore;
+        }
+
     }
 }

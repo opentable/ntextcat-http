@@ -7,10 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NTextCat.NancyHandler", "NT
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NTextCat.NancyHandlerTests", "NTextCat.NancyHandlerTests\NTextCat.NancyHandlerTests.csproj", "{B7B8AE68-8B86-410C-8358-E9FDA4B35A17}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LanguageModels", "LanguageModels", "{4FAB716C-A891-4128-9F4F-3A6BC844C190}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestHost", "TestHost\TestHost.csproj", "{887A8565-4A10-44C8-82EF-F2F2D1D2BFBF}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleHost", "ConsoleHost\ConsoleHost.csproj", "{ED21932F-C23B-47DA-99AF-106D739E830A}"
 EndProject
 Global
@@ -27,10 +23,6 @@ Global
 		{B7B8AE68-8B86-410C-8358-E9FDA4B35A17}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B7B8AE68-8B86-410C-8358-E9FDA4B35A17}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B7B8AE68-8B86-410C-8358-E9FDA4B35A17}.Release|Any CPU.Build.0 = Release|Any CPU
-		{887A8565-4A10-44C8-82EF-F2F2D1D2BFBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{887A8565-4A10-44C8-82EF-F2F2D1D2BFBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{887A8565-4A10-44C8-82EF-F2F2D1D2BFBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{887A8565-4A10-44C8-82EF-F2F2D1D2BFBF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{ED21932F-C23B-47DA-99AF-106D739E830A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{ED21932F-C23B-47DA-99AF-106D739E830A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ED21932F-C23B-47DA-99AF-106D739E830A}.Release|Any CPU.ActiveCfg = Release|Any CPU

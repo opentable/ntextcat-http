@@ -56,16 +56,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LanguageDetection\DetectedLanguageResponse.cs" />
+    <Compile Include="LanguageDetection\Configuration\INTextCatMatchingProfileLoader.cs" />
+    <Compile Include="LanguageDetection\Configuration\NTextCatMatchingProfileLoader.cs" />
+    <Compile Include="LanguageDetection\DetectedLangage.cs" />
+    <Compile Include="LanguageDetection\LanguageDetector.cs" />
     <Compile Include="LanguageDetectModule.cs" />
+    <Compile Include="LanguageDetection\LanguageDetectRequest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
     <None Include="packages.config" />
-    <Content Include="Views\languages.html">
+    <Content Include="Views\language-detection-test-page.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <None Include="web.config" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
