@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>8ef4ab14-c732-4a19-9bf6-0766f4856ffc</ProjectGuid>
+    <OutputPath>Bin\</OutputPath>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <NuBuildVersionSource>Library</NuBuildVersionSource>
+    <NuBuildVersionFileName>False</NuBuildVersionFileName>
+    <NuBuildAddBinariesToSubfolder>True</NuBuildAddBinariesToSubfolder>
+    <NuBuildIncludePdbs>False</NuBuildIncludePdbs>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="NTextCat.Http.Package.nuspec" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NTextCat.NancyHandler\NTextCat.NancyHandler.csproj">
+      <Name>NTextCat.NancyHandler</Name>
+      <Project>{aebca4a6-8aea-45bc-9f9b-d6e0a8f7a671}</Project>
+      <Private>True</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\NuBuild\v1\NuBuild.targets" />
+</Project>
