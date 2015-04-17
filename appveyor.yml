@@ -12,8 +12,9 @@ build:
   verbosity: minimal
 after_test:
   - ps: .\src\NTextCat-Http\.nuget\pack.ps1
+artifacts:
+  - path: '**\*.nupkg'
 deploy:
 - provider: NuGet
-  server: https://www.nuget.org/
   api_key:
     secure: rHr/9vQfPtpJAm+tEit3zCIW715rnPMeEsqUyWqjM/94zrPrOkgXcldrBiTuYQAi
