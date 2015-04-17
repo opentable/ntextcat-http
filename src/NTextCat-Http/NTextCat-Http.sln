@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NTextCat.NancyHandlerTests"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleHost", "ConsoleHost\ConsoleHost.csproj", "{ED21932F-C23B-47DA-99AF-106D739E830A}"
 EndProject
-Project("{E09DD79A-4488-4AB9-8D3F-A7EEE78BF432}") = "NTextCat.Http.Package", "NTextCat.Http.Package\NTextCat.Http.Package.nuproj", "{8EF4AB14-C732-4A19-9BF6-0766F4856FFC}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{219E61E9-BB92-4FC0-B52D-40763855C3C1}"
 	ProjectSection(SolutionItems) = preProject
 		.nuget\NuGet.Config = .nuget\NuGet.Config
@@ -36,10 +34,6 @@ Global
 		{ED21932F-C23B-47DA-99AF-106D739E830A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ED21932F-C23B-47DA-99AF-106D739E830A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ED21932F-C23B-47DA-99AF-106D739E830A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8EF4AB14-C732-4A19-9BF6-0766F4856FFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8EF4AB14-C732-4A19-9BF6-0766F4856FFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8EF4AB14-C732-4A19-9BF6-0766F4856FFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8EF4AB14-C732-4A19-9BF6-0766F4856FFC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

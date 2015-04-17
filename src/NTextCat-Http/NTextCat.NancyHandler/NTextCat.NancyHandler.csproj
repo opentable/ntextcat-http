@@ -69,6 +69,7 @@
     <Content Include="ConfigTransforms\app.config.uninstall.xdt" />
     <Content Include="ConfigTransforms\app.config.install.xdt" />
     <None Include="install.ps1" />
+    <None Include="NTextCat.Http.Package.nuspec" />
     <None Include="packages.config" />
     <Content Include="Views\language-detection-test-page.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
