@@ -11,7 +11,7 @@ configuration: Release
 build:
   verbosity: minimal
 after_test:
-  - ps: .\src\.nuget\pack.ps1
+  - ps: .\src\NTextCat-Http\.nuget\pack.ps1
 deploy:
 - provider: NuGet
   server: https://www.nuget.org/
