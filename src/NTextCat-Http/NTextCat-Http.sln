@@ -11,9 +11,25 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleHost", "ConsoleHost\
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{219E61E9-BB92-4FC0-B52D-40763855C3C1}"
 	ProjectSection(SolutionItems) = preProject
+		.nuget\install.ps1 = .nuget\install.ps1
+		.nuget\NTextCat.Http.Package.nuspec = .nuget\NTextCat.Http.Package.nuspec
 		.nuget\NuGet.Config = .nuget\NuGet.Config
 		.nuget\NuGet.exe = .nuget\NuGet.exe
 		.nuget\NuGet.targets = .nuget\NuGet.targets
+		.nuget\pack.ps1 = .nuget\pack.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B71607C9-3C26-48EF-8439-12742811D780}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\appveyor.yml = ..\..\appveyor.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ConfigTransforms", "ConfigTransforms", "{8B57B98C-2181-4891-8B11-67A054E87FF0}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\ConfigTransforms\app.config.install.xdt = .nuget\ConfigTransforms\app.config.install.xdt
+		.nuget\ConfigTransforms\app.config.uninstall.xdt = .nuget\ConfigTransforms\app.config.uninstall.xdt
+		.nuget\ConfigTransforms\web.config.install.xdt = .nuget\ConfigTransforms\web.config.install.xdt
+		.nuget\ConfigTransforms\web.config.uninstall.xdt = .nuget\ConfigTransforms\web.config.uninstall.xdt
 	EndProjectSection
 EndProject
 Global
@@ -37,5 +53,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8B57B98C-2181-4891-8B11-67A054E87FF0} = {219E61E9-BB92-4FC0-B52D-40763855C3C1}
 	EndGlobalSection
 EndGlobal

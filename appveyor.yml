@@ -1,0 +1,26 @@
+version: 1.0.{build}
+
+branches:
+	only:
+		- master
+
+assembly_info:
+  patch: true
+  file: AssemblyInfo.*
+  assembly_version: "{version}"
+  assembly_file_version: "{version}"
+  assembly_informational_version: "{version}"
+
+configuration: Release
+
+build:
+  verbosity: minimal
+
+after_test:
+  - ps: .\src\.nuget\pack.ps1
+
+deploy:
+- provider: NuGet
+  server: https://www.nuget.org/
+  api_key:
+    secure: rHr/9vQfPtpJAm+tEit3zCIW715rnPMeEsqUyWqjM/94zrPrOkgXcldrBiTuYQAi
