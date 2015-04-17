@@ -64,10 +64,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ConfigTransforms\web.config.uninstall.xdt" />
-    <Content Include="ConfigTransforms\web.config.install.xdt" />
-    <Content Include="ConfigTransforms\app.config.uninstall.xdt" />
-    <Content Include="ConfigTransforms\app.config.install.xdt" />
+    <None Include="ConfigTransforms\web.config.uninstall.xdt" />
+    <None Include="ConfigTransforms\web.config.install.xdt" />
+    <None Include="ConfigTransforms\app.config.uninstall.xdt" />
+    <None Include="ConfigTransforms\app.config.install.xdt" />
     <None Include="install.ps1" />
     <None Include="NTextCat.Http.Package.nuspec" />
     <None Include="packages.config" />
