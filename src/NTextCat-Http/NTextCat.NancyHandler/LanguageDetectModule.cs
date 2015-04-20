@@ -25,6 +25,8 @@ namespace NTextCat.NancyHandler
 
                 DetectedLanguageResponse detectedLanguageResponse = languageDetector.DetectLanguage(model);
 
+                //return Response.AsXml(detectedLanguageResponse);
+
                 return Negotiate
                     .WithModel(detectedLanguageResponse)
                     .WithView(LanguageDetectionViewName);

@@ -4,21 +4,18 @@ namespace NTextCat.NancyHandler.LanguageDetection
 {
     public class DetectedLanguageResponse
     {
-        private readonly List<DetectedLangage> _rankedMatches;
-        private readonly string _originalText;
-
         public DetectedLanguageResponse()
         {
-            _rankedMatches = new List<DetectedLangage>();
+            RankedMatches = new List<DetectedLangage>();
         }
 
-        public DetectedLanguageResponse(IEnumerable<DetectedLangage> languagesDetected, string originalText) : this()
+        public DetectedLanguageResponse(List<DetectedLangage> languagesDetected, string originalText)
         {
-            _rankedMatches.AddRange(languagesDetected);
-            _originalText = originalText;
+            RankedMatches = languagesDetected;
+            OriginalText = originalText;
         }
 
-        public string OriginalText { get { return _originalText; } }
-        public IEnumerable<DetectedLangage> RankedMatches { get { return _rankedMatches; }}
+        public string OriginalText { get; set; }
+        public List<DetectedLangage> RankedMatches { get; set; }
     }
 }
