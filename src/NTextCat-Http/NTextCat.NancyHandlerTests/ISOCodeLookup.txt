@@ -1,0 +1,10 @@
+Abkhaz|аҧсуа бызшәа, аҧсшәа|ab|abk
+Afar|Afaraf|aa|aar
+Afrikaans|Afrikaans|af|afr
+Akan|Akan|ak|aka
+Albanian|Shqip|sq|sqi
+Amharic|አማርኛ|am|amh
+Arabic|العربية|ar|ara
+Aragonese|aragonés|an|arg
+Armenian|Հայերեն|hy|hye
+Assamese|অসমীয়া|as|asm

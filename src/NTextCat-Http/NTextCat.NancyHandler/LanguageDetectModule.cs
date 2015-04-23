@@ -26,6 +26,7 @@ namespace NTextCat.NancyHandler
                 DetectedLanguageResponse detectedLanguageResponse = languageDetector.DetectLanguage(model);
 
                 return Negotiate
+                    .WithContentType("text/html; charset=utf-8")
                     .WithModel(detectedLanguageResponse)
                     .WithView(LanguageDetectionViewName);
             };

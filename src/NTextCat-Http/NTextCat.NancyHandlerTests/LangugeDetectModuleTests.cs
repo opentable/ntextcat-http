@@ -6,6 +6,7 @@ using Nancy.Testing;
 using NTextCat.NancyHandler;
 using NTextCat.NancyHandler.LanguageDetection;
 using NTextCat.NancyHandler.LanguageDetection.Configuration;
+using NTextCat.NancyHandler.LanguageDetection.IsoCodeMapping;
 using NUnit.Framework;
 
 namespace NTextCat.NancyHandlerTests
@@ -133,7 +134,7 @@ namespace NTextCat.NancyHandlerTests
                 
         private LanguageDetectModule BuildSystemUnderTest()
         {
-            return new LanguageDetectModule(new LanguageDetector(new NTextCatMatchingProfileLoader()));
+            return new LanguageDetectModule(new LanguageDetector(new NTextCatMatchingProfileLoader(), new DetectedLanguageBuilder(new Iso639CodeMappingLoader())));
         }
 
         public class DetectedLanguageResponse
