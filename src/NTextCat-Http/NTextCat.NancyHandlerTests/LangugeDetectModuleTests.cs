@@ -145,9 +145,11 @@ namespace NTextCat.NancyHandlerTests
 
         public class DetectedLangage
         {
+            public string EnglishName;
+            public string NativeName;
+            public string Iso6391LanguageCode;
             public string Iso6393LanguageCode;
             public double MatchScore;
         }
-
     }
 }
