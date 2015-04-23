@@ -1,9 +1,14 @@
 ﻿param($installPath, $toolsPath, $package, $project)
 
 $configFile = $project.ProjectItems.Item("Core14.profile.xml")
-$copyToOutput2 = $configFile.Properties.Item("CopyToOutputDirectory")
-$copyToOutput2.Value = 1
+$configFileCopyToOutput = $configFile.Properties.Item("CopyToOutputDirectory")
+$configFileCopyToOutput.Value = 1
 
 $webPage = $project.ProjectItems.Item("Views").ProjectItems.Item("language-detection-test-page.html")
-$copyToOutput1 = $webPage.Properties.Item("CopyToOutputDirectory")
-$copyToOutput1.Value = 1
+$webPageCopyToOutput = $webPage.Properties.Item("CopyToOutputDirectory")
+$webPageCopyToOutput.Value = 1
+
+
+$mappingFile = $project.ProjectItems.Item("ISOCodeLookup.txt")
+$mappingFileCopyToOutput = $mappingFile.Properties.Item("CopyToOutputDirectory")
+$mappingFileCopyToOutput.Value = 1

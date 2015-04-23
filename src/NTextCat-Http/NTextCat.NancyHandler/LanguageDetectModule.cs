@@ -28,6 +28,7 @@ namespace NTextCat.NancyHandler
                 //return Response.AsXml(detectedLanguageResponse);
 
                 return Negotiate
+                    .WithContentType("text/html; charset=utf-8")
                     .WithModel(detectedLanguageResponse)
                     .WithView(LanguageDetectionViewName);
             };

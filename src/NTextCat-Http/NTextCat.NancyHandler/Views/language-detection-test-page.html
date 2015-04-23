@@ -13,10 +13,23 @@
 
     <h2>Ranked Detected language</h2>
         Original Text: @Model.OriginalText
-        <ul>
-            @Each.RankedMatches            
-                <li>Iso6392 Language Code: @Current.Iso6393LanguageCode score is @Current.MatchScore</li>
-            @EndEach
-        </ul>
+    <table>
+        <tr>
+            <th>English Name</th>
+            <th>Native Name</th>
+            <th>Iso639-1 code</th>
+            <th>Iso639-3 code</th>
+            <th>Match Score</th>
+        </tr>
+        @Each.RankedMatches
+        <tr>
+            <td>@Current.EnglishName</td>
+            <td>@Current.NativeName</td>
+            <td>@Current.Iso6391LanguageCode</td>
+            <td>@Current.Iso6393LanguageCode</td>
+            <td>@Current.MatchScore</td>
+        </tr>
+        @EndEach
+    </table>
     </body>
 </html>

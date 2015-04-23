@@ -1,0 +1,183 @@
+Abkhaz|аҧсуа бызшәа, аҧсшәа|ab|abk
+Afar|Afaraf|aa|aar
+Afrikaans|Afrikaans|af|afr
+Akan|Akan|ak|aka
+Albanian|Shqip|sq|sqi
+Amharic|አማርኛ|am|amh
+Arabic|العربية|ar|ara
+Aragonese|aragonés|an|arg
+Armenian|Հայերեն|hy|hye
+Assamese|অসমীয়া|as|asm
+Avaric|авар мацӀ, магӀарул мацӀ|av|ava
+Avestan|avesta|ae|ave
+Aymara|aymar aru|ay|aym
+Azerbaijani|azərbaycan dili|az|aze
+Bambara|bamanankan|bm|bam
+Bashkir|башҡорт теле|ba|bak
+Basque|euskara, euskera|eu|eus
+Belarusian|беларуская мова|be|bel
+Bengali, Bangla|বাংলা|bn|ben
+Bislama|Bislama|bi|bis
+Bosnian|bosanski jezik|bs|bos
+Breton|brezhoneg|br|bre
+Bulgarian|български език|bg|bul
+Burmese|ဗမာစာ|my|mya
+Catalan|català|ca|cat
+Chamorro|Chamoru|ch|cha
+Chechen|нохчийн мотт|ce|che
+Chichewa, Chewa, Nyanja|chiCheŵa, chinyanja|ny|nya
+Chinese|中文 (Zhōngwén), 汉语, 漢語|zh|zho
+Chuvash|чӑваш чӗлхи|cv|chv
+Cornish|Kernewek|kw|cor
+Corsican|corsu, lingua corsa|co|cos
+Cree|ᓀᐦᐃᔭᐍᐏᐣ|cr|cre
+Croatian|hrvatski jezik|hr|hrv
+Czech|čeština, český jazyk|cs|ces
+Danish|dansk|da|dan
+Divehi, Dhivehi, Maldivian|ދިވެހި|dv|div
+Dutch|Nederlands, Vlaams|nl|nld
+Dzongkha|རྫོང་ཁ|dz|dzo
+English|English|en|eng
+Esperanto|Esperanto|eo|epo
+Estonian|eesti, eesti keel|et|est
+Ewe|Eʋegbe|ee|ewe
+Faroese|føroyskt|fo|fao
+Fijian|vosa Vakaviti|fj|fij
+Finnish|suomi, suomen kieli|fi|fin
+French|français, langue française|fr|fra
+Fula, Fulah, Pulaar, Pular|Fulfulde, Pulaar, Pular|ff|ful
+Galician|galego|gl|glg
+Georgian|ქართული|ka|kat
+German|Deutsch|de|deu
+Greek (modern)|ελληνικά|el|ell
+Guaraní|Avañe'ẽ|gn|grn
+Gujarati|ગુજરાતી|gu|guj
+Haitian, Haitian Creole|Kreyòl ayisyen|ht|hat
+Hausa|(Hausa) هَوُسَ|ha|hau
+Hebrew (modern)|עברית|he|heb
+Herero|Otjiherero|hz|her
+Hindi|हिन्दी, हिंदी|hi|hin
+Hiri Motu|Hiri Motu|ho|hmo
+Hungarian|magyar|hu|hun
+Interlingua|Interlingua|ia|ina
+Indonesian|Bahasa Indonesia|id|ind
+Interlingue|Originally called Occidental; then Interlingue after WWII|ie|ile
+Irish|Gaeilge|ga|gle
+Igbo|Asụsụ Igbo|ig|ibo
+Inupiaq|Iñupiaq, Iñupiatun|ik|ipk
+Ido|Ido|io|ido
+Icelandic|Íslenska|is|isl
+Italian|italiano|it|ita
+Inuktitut|ᐃᓄᒃᑎᑐᑦ|iu|iku
+Japanese|日本語 (にほんご)|ja|jpn
+Javanese|basa Jawa|jv|jav
+Kalaallisut, Greenlandic|kalaallisut, kalaallit oqaasii|kl|kal
+Kannada|ಕನ್ನಡ|kn|kan
+Kanuri|Kanuri|kr|kau
+Kashmiri|कश्मीरी, كشميري‎|ks|kas
+Kazakh|қазақ тілі|kk|kaz
+Khmer|ខ្មែរ, ខេមរភាសា, ភាសាខ្មែរ|km|khm
+Kikuyu, Gikuyu|Gĩkũyũ|ki|kik
+Kinyarwanda|Ikinyarwanda|rw|kin
+Kyrgyz|Кыргызча, Кыргыз тили|ky|kir
+Komi|коми кыв|kv|kom
+Kongo|Kikongo|kg|kon
+Korean|한국어, 조선어|ko|kor
+Kurdish|Kurdî, كوردی‎|ku|kur
+Kwanyama, Kuanyama|Kuanyama|kj|kua
+Latin|latine, lingua latina|la|lat
+Luxembourgish, Letzeburgesch|Lëtzebuergesch|lb|ltz
+Ganda|Luganda|lg|lug
+Limburgish, Limburgan, Limburger|Limburgs|li|lim
+Lingala|Lingála|ln|lin
+Lao|ພາສາລາວ|lo|lao
+Lithuanian|lietuvių kalba|lt|lit
+Luba-Katanga|Tshiluba|lu|lub
+Latvian|latviešu valoda|lv|lav
+Manx|Gaelg, Gailck|gv|glv
+Macedonian|македонски јазик|mk|mkd
+Malagasy|fiteny malagasy|mg|mlg
+Malay|bahasa Melayu, بهاس ملايو‎|ms|msa
+Malayalam|മലയാളം|ml|mal
+Maltese|Malti|mt|mlt
+Māori|te reo Māori|mi|mri
+Marathi (Marāṭhī)|मराठी|mr|mar
+Marshallese|Kajin M̧ajeļ|mh|mah
+Mongolian|монгол|mn|mon
+Nauru|Ekakairũ Naoero|na|nau
+Navajo, Navaho|Diné bizaad|nv|nav
+Northern Ndebele|isiNdebele|nd|nde
+Nepali|नेपाली|ne|nep
+Ndonga|Owambo|ng|ndo
+Norwegian Bokmål|Norsk bokmål|nb|nob
+Norwegian Nynorsk|Norsk nynorsk|nn|nno
+Norwegian|Norsk|no|nor
+Nuosu|ꆈꌠ꒿ Nuosuhxop|ii|iii
+Southern Ndebele|isiNdebele|nr|nbl
+Occitan|occitan, lenga d'òc|oc|oci
+Ojibwe, Ojibwa|ᐊᓂᔑᓈᐯᒧᐎᓐ|oj|oji
+Old Church Slavonic, Church Slavonic, Old Bulgarian|ѩзыкъ словѣньскъ|cu|chu
+Oromo|Afaan Oromoo|om|orm
+Oriya|ଓଡ଼ିଆ|or|ori
+Ossetian, Ossetic|ирон æвзаг|os|oss
+Panjabi, Punjabi|ਪੰਜਾਬੀ, پنجابی‎|pa|pan
+Pāli|पाऴि|pi|pli
+Persian (Farsi)|فارسی|fa|fas
+Polish|język polski, polszczyzna|pl|pol
+Pashto, Pushto|پښتو|ps|pus
+Portuguese|português|pt|por
+Quechua|Runa Simi, Kichwa|qu|que
+Romansh|rumantsch grischun|rm|roh
+Kirundi|Ikirundi|rn|run
+Romanian|limba română|ro|ron
+Russian|Русский|ru|rus
+Sanskrit (Saṁskṛta)|संस्कृतम्|sa|san
+Sardinian|sardu|sc|srd
+Sindhi|सिन्धी, سنڌي، سندھی‎|sd|snd
+Northern Sami|Davvisámegiella|se|sme
+Samoan|gagana fa'a Samoa|sm|smo
+Sango|yângâ tî sängö|sg|sag
+Serbian|српски језик|sr|srp
+Scottish Gaelic, Gaelic|Gàidhlig|gd|gla
+Shona|chiShona|sn|sna
+Sinhala, Sinhalese|සිංහල|si|sin
+Slovak|slovenčina, slovenský jazyk|sk|slk
+Slovene|slovenski jezik, slovenščina|sl|slv
+Somali|Soomaaliga, af Soomaali|so|som
+Southern Sotho|Sesotho|st|sot
+Spanish|español|es|spa
+Sundanese|Basa Sunda|su|sun
+Swahili|Kiswahili|sw|swa
+Swati|SiSwati|ss|ssw
+Swedish|svenska|sv|swe
+Tamil|தமிழ்|ta|tam
+Telugu|తెలుగు|te|tel
+Tajik|тоҷикӣ, toçikī, تاجیکی‎|tg|tgk
+Thai|ไทย|th|tha
+Tigrinya|ትግርኛ|ti|tir
+Tibetan Standard, Tibetan, Central|བོད་ཡིག|bo|bod
+Turkmen|Türkmen, Түркмен|tk|tuk
+Tagalog|Wikang Tagalog|tl|tgl
+Tswana|Setswana|tn|tsn
+Tonga (Tonga Islands)|faka Tonga|to|ton
+Turkish|Türkçe|tr|tur
+Tsonga|Xitsonga|ts|tso
+Tatar|татар теле, tatar tele|tt|tat
+Twi|Twi|tw|twi
+Tahitian|Reo Tahiti|ty|tah
+Uyghur|ئۇيغۇرچە‎, Uyghurche|ug|uig
+Ukrainian|українська мова|uk|ukr
+Urdu|اردو|ur|urd
+Uzbek|Oʻzbek, Ўзбек, أۇزبېك‎|uz|uzb
+Venda|Tshivenḓa|ve|ven
+Vietnamese|Việt Nam|vi|vie
+Volapük|Volapük|vo|vol
+Walloon|walon|wa|wln
+Welsh|Cymraeg|cy|cym
+Wolof|Wollof|wo|wol
+Western Frisian|Frysk|fy|fry
+Xhosa|isiXhosa|xh|xho
+Yiddish|ייִדיש|yi|yid
+Yoruba|Yorùbá|yo|yor
+Zhuang, Chuang|Saɯ cueŋƅ, Saw cuengh|za|zha
+Zulu|isiZulu|zu|zul
