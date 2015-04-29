@@ -1,6 +1,8 @@
 # ntextcat-http
 A NancyFx wrapper around the NTextCat project to expose language translations as a web service. The original project can be found at http://ntextcat.codeplex.com/. 
 
+[![Build status](https://ci.appveyor.com/api/projects/status/u2riv0c1dlxvvx3f?svg=true)](https://ci.appveyor.com/project/DafyddGiddins/ntextcat-http)
+
 ## Getting Started
 You can install this from nuget into any hosting project that supports nancy hosting via nuget.
 
