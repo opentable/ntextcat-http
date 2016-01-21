@@ -11,18 +11,18 @@ namespace NTextCat.NancyHandler.LanguageDetection
     {
         private readonly INTextCatMatchingProfileLoader _profileLoader;
         private readonly DetectedLanguageBuilder _builder;
+        private readonly RankedLanguageIdentifier _identifier;
 
         public LanguageDetector(INTextCatMatchingProfileLoader profileLoader, DetectedLanguageBuilder builder)
         {
             _profileLoader = profileLoader;
             _builder = builder;
+            _identifier = new RankedLanguageIdentifierFactory().Load(_profileLoader.MatchingProfileFile);
         }
 
         public DetectedLanguageResponse DetectLanguage(LanguageDetectRequest model)
         {
-            var identifier = new RankedLanguageIdentifierFactory().Load(_profileLoader.MatchingProfileFile);
-
-            IEnumerable<Tuple<LanguageInfo, double>> matches = identifier.Identify(model.TextForLanguageClassification);
+            IEnumerable<Tuple<LanguageInfo, double>> matches = _identifier.Identify(model.TextForLanguageClassification);
             DetectedLanguageResponse detectedLanguageResponse = FormatResponse(matches, model);
 
             return detectedLanguageResponse;

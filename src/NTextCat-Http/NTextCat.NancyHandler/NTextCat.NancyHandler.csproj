@@ -65,6 +65,7 @@
     <Compile Include="LanguageDetectModule.cs" />
     <Compile Include="LanguageDetection\LanguageDetectRequest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="LanguageBootstrapper.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
